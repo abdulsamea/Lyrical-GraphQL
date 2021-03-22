@@ -5,10 +5,18 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const schema = require('./schema/schema');
 
+
+const dotenv = require('dotenv');
+const result = dotenv.config();
+if (result.error) {
+  throw result.error;
+}
+const { parsed: envs } = result;
+module.exports = envs;
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = '';
+const MONGO_URI = process.env.MONGO_DB_URL;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
