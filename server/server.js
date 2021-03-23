@@ -6,13 +6,13 @@ const bodyParser = require('body-parser');
 const schema = require('./schema/schema');
 
 
-const dotenv = require('dotenv');
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
-const { parsed: envs } = result;
-module.exports = envs;
+// const dotenv = require('dotenv');
+// const result = dotenv.config();
+// if (result.error) {
+//   throw result.error;
+// }
+// const { parsed: envs } = result;
+// module.exports = envs;
 const app = express();
 
 // Replace with your mongoLab URI
