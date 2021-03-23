@@ -16,7 +16,7 @@ module.exports = envs;
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = process.env.MONGO_DB_URL;
+const MONGO_URI = 'mongodb://abdulsamea:abcd1234@cluster0-shard-00-00.ncwbd.mongodb.net:27017,cluster0-shard-00-01.ncwbd.mongodb.net:27017,cluster0-shard-00-02.ncwbd.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-1k0xon-shard-0&authSource=admin&retryWrites=true&w=majority';
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
